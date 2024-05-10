@@ -3,9 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VYBZE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
 </head>
 <body>
+
+    <!-- Logo -->
+<div id="logo">
+    <img src="./assets/Vybze logo.png" alt="Vybze logo" class="logo">
+</div>
+
+<!-- Dropup container -->
+
+<div class="dropdown is-up">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu7">
+        <span>Energy</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-up" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu7" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <p>
+            You can add the <code>is-up</code> modifier to have a dropdown menu
+            that appears above the dropdown button.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="dropdown is-up">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu7">
+        <span>Situation</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-up" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu7" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <p>
+            You can add the <code>is-up</code> modifier to have a dropdown menu
+            that appears above the dropdown button.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown is-up">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu7">
+        <span>Mood</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-up" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu7" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <p>
+            You can add the <code>is-up</code> modifier to have a dropdown menu
+            that appears above the dropdown button.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal Button -->
+<div>
+<button class="js-modal-trigger" data-target="modal-js-example">
+    Pick Your Poison
+  </button>
+</div>
+<!-- The Modal -->
+<div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <p>Modal JS example</p>
+        <!-- Your content -->
+      </div>
+    </div>
+  
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
     
+
+  <!-- Modal content
+  <div class="modal-content">
+  
+    <span class="close">&times;</span>
+    <div id="playlist"></div>
+    <div id="flickr-images"></div>
+  </div> -->
+
+</div>
+
+<script src="./assets/js/script.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
 </body>
 </html>
