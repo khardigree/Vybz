@@ -43,6 +43,81 @@
     margin-bottom: 10px;
 }
 
-.logo {
-    margin-bottom: 220px;
+#logo img {
+    margin-bottom: 150px;
+    max-width: 550px;
+    height: auto;
+    margin-left: 20px;
+
 }
+
+.button {
+    margin-top: 20px;
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.energy{
+    color: #F72798;
+
+}
+
+.situation {
+    color: #F57D1F;
+}
+
+.mood {
+    color: #EBF400;
+
+}
+
+.js-modal-trigger {
+    margin-top: 20px;
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px;
+    border: 2px solid transparent; /* Transparent border */
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+    
+
+
+.js-modal-trigger:hover {
+    border-color: #EBF400; 
+    box-shadow: 0 0 15px 0 #EBF400; /* Neon glow */
+}
+
+
+
+footer {
+    margin-top: 20px;
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.is-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: left;
+}
+
+

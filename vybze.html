@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VYBZE</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
 </head>
 <body>
 
     <!-- Logo -->
+<div class="logo-container">
 <div id="logo">
     <img src="./assets/Vybze logo.png" alt="Vybze logo" class="logo">
 </div>
+</div>
 
 <!-- Dropup container -->
-
-<div class="dropdown is-up">
+<div class="container is-centered">
+<div class="dropdown is-up ">
     <div class="dropdown-trigger">
       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu7">
-        <span>Energy</span>
+        <span class="energy">Energy</span>
         <span class="icon is-small">
           <i class="fas fa-angle-up" aria-hidden="true"></i>
         </span>
@@ -28,10 +35,12 @@
     <div class="dropdown-menu" id="dropdown-menu7" role="menu">
       <div class="dropdown-content">
         <div class="dropdown-item">
-          <p>
-            You can add the <code>is-up</code> modifier to have a dropdown menu
-            that appears above the dropdown button.
-          </p>
+          <ul>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -40,7 +49,7 @@
   <div class="dropdown is-up">
     <div class="dropdown-trigger">
       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu7">
-        <span>Situation</span>
+        <span class="situation">Situation</span>
         <span class="icon is-small">
           <i class="fas fa-angle-up" aria-hidden="true"></i>
         </span>
@@ -49,10 +58,12 @@
     <div class="dropdown-menu" id="dropdown-menu7" role="menu">
       <div class="dropdown-content">
         <div class="dropdown-item">
-          <p>
-            You can add the <code>is-up</code> modifier to have a dropdown menu
-            that appears above the dropdown button.
-          </p>
+          <ul>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -61,7 +72,7 @@
   <div class="dropdown is-up">
     <div class="dropdown-trigger">
       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu7">
-        <span>Mood</span>
+        <span class="mood">Mood</span>
         <span class="icon is-small">
           <i class="fas fa-angle-up" aria-hidden="true"></i>
         </span>
@@ -70,17 +81,20 @@
     <div class="dropdown-menu" id="dropdown-menu7" role="menu">
       <div class="dropdown-content">
         <div class="dropdown-item">
-          <p>
-            You can add the <code>is-up</code> modifier to have a dropdown menu
-            that appears above the dropdown button.
-          </p>
+          <ul>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+            <li><a href="">Example</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <!-- Modal Button -->
-<div>
+<div class="container is-centered">
 <button class="js-modal-trigger" data-target="modal-js-example">
     Pick Your Poison
   </button>
@@ -109,6 +123,17 @@
   </div> -->
 
 </div>
+<br>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Vybze</strong> by <a href="https://github.com/contra19">Rob Wisniewski</a>, <a href="https://github.com/trevorapena">Trevor Pe&#xf1;a</a>, and <a href="https://github.com/khardigree">Kaitlynn Hardigree</a>.
+      The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+      Made with Love, Spite, HTML5, CSS3, JavaScript, and Bulma.
+    </p>
+  </div>
+</footer>
 
 <script src="./assets/js/script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
