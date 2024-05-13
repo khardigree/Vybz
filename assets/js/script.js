@@ -1,3 +1,34 @@
+const energyDropdownEl = document.querySelector('.energy-dropdown');
+const energySpanEl = document.querySelector('.energy');
+
+const situationDropdownEl = document.querySelector('.situation-dropdown');
+const situationSpanEl = document.querySelector('.situation');
+
+const moodDropdownEl = document.querySelector('.mood-dropdown');
+const moodSpanEl = document.querySelector('.mood');
+
+let energyValue = ""
+let situationValue = ""
+let moodValue = ""
+
+energyDropdownEl.addEventListener('click', function (event) {
+  energyValue = event.target.textContent
+  energySpanEl.textContent = energyValue
+})
+
+situationDropdownEl.addEventListener('click', function (event) {
+  situationValue = event.target.textContent
+  situationSpanEl.textContent = situationValue
+})
+
+moodDropdownEl.addEventListener('click', function (event) {
+  moodValue = event.target.textContent
+  moodSpanEl.textContent = moodValue
+})
+
+console.log(energyValue, situationValue, moodValue)
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Get all dropdowns
     var dropdowns = document.querySelectorAll('.dropdown');
