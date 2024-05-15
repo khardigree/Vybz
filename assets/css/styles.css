@@ -1,3 +1,10 @@
+body {
+    background-color: slategray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Style for modal */
 .modal {
     display: none; /* Hidden by default */
@@ -52,6 +59,7 @@
 }
 
 .button {
+    background-color: black;
     margin-top: 20px;
     font-family: "New Rocker", system-ui;
     font-weight: 400;
@@ -60,6 +68,7 @@
     margin: 10px;
     padding-left: 100px;
     padding-right: 100px;
+    border-color: #F57D1F;
 }
 
 .energy{
@@ -92,19 +101,25 @@
 }
     
 
-
 .js-modal-trigger:hover {
     border-color: #EBF400; 
     box-shadow: 0 0 15px 0 #EBF400; /* Neon glow */
 }
 
-
-
+/* Style for the footer */
 footer {
-    margin-top: 20px;
+    margin-top: auto; /* Pushes footer to the bottom */
     font-family: "New Rocker", system-ui;
     font-weight: 400;
     font-style: normal;
+    width: 100%;
+    text-align: center; /* Optional: center align text */
+    border-top: 3px solid #F72898; /* Optional: top border for separation */
+}
+
+.footer {
+    background-color: #EAF400; /* Optional: background color for the footer */
+    padding: 25px 0px;
 }
 
 .is-centered {
