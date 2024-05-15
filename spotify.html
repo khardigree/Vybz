@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <h1>Spotify Track Search</h1>
+    <label for="tags">Enter Tags:</label>
+    <input type="text" id="tags" name="tags">
+    <button onclick="searchAndPlay()">Search & Play</button>
+
+    <audio id="audioPlayer" controls style="display: none;"></audio>
+
+</body>
+<script src="./assets/js/spotify.js"></script>
+</html>

@@ -34,7 +34,7 @@
           </span>
         </button>
       </div>
-      <div class="dropdown-menu" id="dropdown-menu7" role="menu">
+      <div class="dropdown-menu" id="energy-dropdown-menu" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
             <ul class="energy-dropdown">
@@ -58,7 +58,7 @@
           </span>
         </button>
       </div>
-      <div class="dropdown-menu" id="dropdown-menu7" role="menu">
+      <div class="dropdown-menu" id="situation-dropdown-menu" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
             <ul class = "situation-dropdown">
@@ -82,7 +82,7 @@
           </span>
         </button>
       </div>
-      <div class="dropdown-menu" id="dropdown-menu7" role="menu">
+      <div class="dropdown-menu" id="mood-dropdown-menu" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
             <ul class = "mood-dropdown">
@@ -100,7 +100,7 @@
 
   <!-- Modal Button -->
   <div class="container is-centered">
-    <button class="js-modal-trigger" data-target="modal-js-example">
+    <button class="js-modal-trigger" data-target="modal-js-example" id="makeMagic">
       Pick Your Poison
     </button>
   </div>
@@ -110,25 +110,14 @@
 
     <div class="modal-content">
       <div class="box">
-        <p>Modal JS example</p>
-        <!-- Your content -->
+        <!-- Music Player -->
+        <audio id="audioPlayer" controls style="width: 100%;"></audio>
       </div>
     </div>
 
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-
-  <!-- Modal content
-  <div class="modal-content">
-  
-    <span class="close">&times;</span>
-    <div id="playlist"></div>
-    <div id="flickr-images"></div>
-  </div> -->
-
-  </div>
-  <br>
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
@@ -140,11 +129,9 @@
         Made with Love, Spite, HTML5, CSS3, JavaScript, and Bulma.
       </p>
     </div>
+    <script src="./assets/js/spotify.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
   </footer>
-
-  <script src="./assets/js/script.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-
 </body>
-
 </html>
