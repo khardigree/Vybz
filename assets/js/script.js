@@ -1,4 +1,6 @@
+// Wait for the DOM content to be fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', () => {
+  // Get references to various dropdown elements and spans
   const energyDropdownEl = document.querySelector('.energy-dropdown');
   const energySpanEl = document.querySelector('.energy');
   const situationDropdownEl = document.querySelector('.situation-dropdown');
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const moodSpanEl = document.querySelector('.mood');
   const userTags = [];
 
-
+  // Event listener for energy dropdown
   energyDropdownEl.addEventListener('click', function (event) {
     let energyValue = "";
     energyValue = event.target.textContent;
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userTags.push(energyValue);
   });
 
+  // Event listener for situation dropdown
   situationDropdownEl.addEventListener('click', function (event) {
     let situationValue = "";
     situationValue = event.target.textContent;
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userTags.push(situationValue);
   });
 
+  // Event listener for mood dropdown
   moodDropdownEl.addEventListener('click', function (event) {
     let moodValue = "";
     moodValue = event.target.textContent;
@@ -29,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userTags.push(moodValue);
   });
 
+  // Event listener to handle dropdown functionality
   var dropdowns = document.querySelectorAll('.dropdown');
   dropdowns.forEach(function (dropdown) {
     dropdown.addEventListener('click', function (event) {
@@ -37,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Event listener to close dropdowns when clicking outside
   document.addEventListener('click', function(event) {
     const dropdowns = document.querySelectorAll('.dropdown');
     const isDropdownClick = Array.from(dropdowns).some(dropdown => dropdown.contains(event.target));
@@ -48,13 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  // Get modal elements and modal triggers
   const modals = document.querySelectorAll('.modal');
   const modalTriggers = document.querySelectorAll('.js-modal-trigger');
 
+  // Loop through each modal trigger
   modalTriggers.forEach(($trigger) => {
     const modalId = $trigger.dataset.target;
     const $target = document.getElementById(modalId);
 
+    // Event listener for opening modal
     $trigger.addEventListener('click', () => {
       if (userTags.length === 0) {
         alert('Please select at least one tag.');
@@ -65,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchAndDisplayImages(userTags.join(','));
     });
 
+    // Event listeners for closing modal
     const modalCloseElements = document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button');
     modalCloseElements.forEach(($close) => {
       const $target = $close.closest('.modal');
@@ -75,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Event listener for closing modal with escape key
     document.addEventListener('keydown', (event) => {
       if (event.key === "Escape") {
         closeAllModals();
@@ -82,28 +93,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Function to open modal
   function openModal($el) {
     $el.classList.add('is-active');
   }
 
+  // Function to close modal
   function closeModal($el) {
     $el.classList.remove('is-active');
     const audioPlayer = document.getElementById('audioPlayer');
     audioPlayer.pause();
   }
 
+  // Function to close all modals
   function closeAllModals() {
     (document.querySelectorAll('.modal') || []).forEach(($modal) => {
       closeModal($modal);
     });
   }
 
+  // Function to search and play audio based on tags
   async function searchAndPlay(tags) {
     if (!tags) {
       alert('Please enter tags to search.');
       return;
     }
 
+    // Spotify API credentials
     const clientId = '3ec248ef62494e84a577442e5d44ac7d'; 
     const clientSecret = '73ab3cf629ae43d08cf35dc332b2b289'; 
 
@@ -113,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchEndpoint = 'https://api.spotify.com/v1/search';
 
     try {
+      // Fetch access token
       const tokenResponse = await fetch(tokenEndpoint, {
         method: 'POST',
         headers: {
@@ -125,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const tokenData = await tokenResponse.json();
       const accessToken = tokenData.access_token;
 
+      // Perform search for tracks
       const randomOffset = Math.floor(Math.random() * 100); // Random offset for varied results
       const searchResponse = await fetch(`${searchEndpoint}?q=${tags}&type=track&limit=10&offset=${randomOffset}&market=US&include_external=audio`, {
         method: 'GET',
@@ -141,10 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // Play audio tracks
       const audioPlayer = document.getElementById('audioPlayer');
       let index = 0;
       playNextTrack();
 
+      // Play next track when current track ends
       function playNextTrack() {
         if (index >= tracks.length) {
           return;
@@ -159,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       }
 
+      // Play next track when current track ends
       audioPlayer.onended = function () {
         index++;
         playNextTrack();
@@ -177,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Function to fetch images from Flickr
   async function fetchImagesFromFlickr(tags) {
     const apiKey = '55f58c8aca166311594c1e251ad1f6e1'; 
     const apiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tags}&safe_search=1&per_page=100&format=json&nojsoncallback=1`;
@@ -200,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Function to display images in a slideshow
   function displayImagesInSlideshow(imageUrls) {
     const slideshowContainer = document.querySelector('.slideshow-container');
     slideshowContainer.innerHTML = ''; 
@@ -223,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   }
 
+  // Function to show slides in the slideshow
   function showSlides(n) {
     const slides = document.querySelectorAll('.mySlides');
     if (n >= slides.length) {
