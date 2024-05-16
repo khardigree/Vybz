@@ -1,3 +1,4 @@
+/* Body Styles */
 body {
     background-color: slategray;
     display: flex;
@@ -5,6 +6,126 @@ body {
     min-height: 100vh;
 }
 
+/* Style for headings */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #F57D1F;
+    margin-bottom: 20px;
+}
+
+/* Style for paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style for links */
+a {
+    color: #F72798;
+    text-decoration: none;
+}
+
+/* Style for buttons */
+.button {
+    background-color: #F57D1F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style for error messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Style for success messages */
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Style for form container */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for form submit button */
+.form-container .submit-button {
+    background-color: #F57D1F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style for form submit button on hover */
+.form-container .submit-button:hover {
+    background-color: #F72798;
+}
+
+/* Style for form submit button on focus */
+.form-container .submit-button:focus {
+    outline: none;
+}
+
+/* Style for form submit button on disabled state */
+.form-container .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Style for form submit button on disabled state */
+.form-container .submit-button:disabled:hover {
+    background-color: #ccc;
+}
+
+/* Style for form submit button on disabled state */
+.form-container .submit-button:disabled:focus {
+    outline: none;
+}
+
+/* Style for form submit button on active state */
+.form-container .submit-button:active {
+    background-color: #F57D1F;
+}
+
+/* Style for form submit button on active state */
+.form-container .submit-button:active:focus {
+    outline: none;
+}
+
+/* Style for form submit button on active state */
+.form-container .submit-button:active:hover {
+    background-color: #F72798;
+}
 /* Style for modal */
 .modal {
     display: none; /* Hidden by default */
@@ -135,4 +256,17 @@ footer {
     justify-content: left;
 }
 
-
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .slideshow-image {
+    width: 100%;
+    height: auto;
+  }
