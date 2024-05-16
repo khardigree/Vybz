@@ -11,7 +11,6 @@ VYBZE is a web application designed to curate music and imagery based on user-se
 - **Tag-Based Search:** Users can select tags from predefined categories including energy, situation, and mood to personalize their content preferences.
 - **Dynamic Audio Playback:** VYBZE utilizes the Spotify API to search for and play audio tracks matching the selected tags, offering a seamless listening experience.
 - **Imagery Integration:** The application fetches images from Flickr based on user-selected tags, displaying them in a slideshow to complement the music playback.
-- **Responsive Design:** VYBZE is built with responsive design principles, ensuring compatibility and optimal viewing across various devices and screen sizes.
 - **Modal Interaction:** Modal windows are used for tag selection and content presentation, enhancing user engagement and interaction.
 
 ---
@@ -32,16 +31,29 @@ VYBZE is a web application designed to curate music and imagery based on user-se
 ---
 
 ## Installation:
-1. Clone the repository: `git clone https://github.com/yourusername/vybze.git`
+1. Clone the repository: `git clone https://github.com/khardigree/vybze.git`
 2. Navigate to the project directory: `cd vybze`
 3. Open `index.html` in a web browser.
+4. You can also navigate to the url on any browser: 
 
 ---
 
 ## Usage:
 1. Open the application in a web browser.
+<figure>
+    <figcaption>Vybze Landing Page</figcaption>
+    <img src="./assets/images/Vybze1.png" alt="Vybze landing page" height="250">
+  </figure>
 2. Select tags for energy, situation, and mood from the dropdown menus.
+<figure>
+    <figcaption>Vybze Selections</figcaption>
+    <img src="./assets/images/Vybze2.png" alt="Vybze Selections" height="250">
+  </figure>
 3. Click the "Pick Your Poison" button to initiate content retrieval and presentation.
+<figure>
+    <figcaption>Curated Vybze</figcaption>
+    <img src="./assets/images/Vybze3.png" alt="An image of the deployed modal with an image and a track player" height="250">
+  </figure>
 4. Enjoy the curated music tracks and accompanying imagery.
 
 ---

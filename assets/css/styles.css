@@ -1,6 +1,8 @@
 /* Body Styles */
 body {
-    background-color: slategray;
+    background: url(../images/Vybzebg.gif);
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
