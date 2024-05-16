@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Event listener to close dropdowns when clicking outside
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', function (event) {
     const dropdowns = document.querySelectorAll('.dropdown');
     const isDropdownClick = Array.from(dropdowns).some(dropdown => dropdown.contains(event.target));
-  
+
     if (!isDropdownClick) {
       dropdowns.forEach(dropdown => {
         dropdown.classList.remove('is-active');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Get modal elements and modal triggers
   const modals = document.querySelectorAll('.modal');
-  const modalTriggers = document.querySelectorAll('.js-modal-trigger');
+  const modalTriggers = document.querySelectorAll('.pickBtn');
 
   // Loop through each modal trigger
   modalTriggers.forEach(($trigger) => {
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Spotify API credentials
-    const clientId = '3ec248ef62494e84a577442e5d44ac7d'; 
-    const clientSecret = '73ab3cf629ae43d08cf35dc332b2b289'; 
+    const clientId = '3ec248ef62494e84a577442e5d44ac7d';
+    const clientSecret = '73ab3cf629ae43d08cf35dc332b2b289';
 
     const authString = btoa(clientId + ':' + clientSecret);
 
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to fetch images from Flickr
   async function fetchImagesFromFlickr(tags) {
-    const apiKey = '55f58c8aca166311594c1e251ad1f6e1'; 
+    const apiKey = '55f58c8aca166311594c1e251ad1f6e1';
     const apiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tags}&safe_search=1&per_page=100&format=json&nojsoncallback=1`;
 
     try {
@@ -225,12 +225,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to display images in a slideshow
   function displayImagesInSlideshow(imageUrls) {
     const slideshowContainer = document.querySelector('.slideshow-container');
-    slideshowContainer.innerHTML = ''; 
+    slideshowContainer.innerHTML = '';
 
     imageUrls.forEach((url, index) => {
       const slideDiv = document.createElement('div');
       slideDiv.classList.add('mySlides', 'fade');
-      if (index === 0) slideDiv.style.display = 'block'; 
+      if (index === 0) slideDiv.style.display = 'block';
 
       const img = document.createElement('img');
       img.src = url;
