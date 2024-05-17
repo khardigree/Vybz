@@ -34,7 +34,7 @@ VYBZE is a web application designed to curate music and imagery based on user-se
 1. Clone the repository: `git clone https://github.com/khardigree/vybze.git`
 2. Navigate to the project directory: `cd vybze`
 3. Open `index.html` in a web browser.
-4. You can also navigate to the url on any browser: 
+4. You can also navigate to the url on any browser: https://khardigree.github.io/Vybze/
 
 ---
 
